@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+
+            /*https://developer.mozilla.org/en-US/docs/Web/CSS/margin-block-end*/
+
+            color: navy;
+            margin-left: 20px;
+            margin-left: 20%;
+            margin-left: 1em;
+            /*margin-left: 0;
+            */
+
+            margin-right: 20px;
+            margin-right: 20px;
+            margin-right: 20%;
+            margin-right: 1em;
+            /*margin-left: 0;
+            */
+
+            margin: 1em;
+            margin: 5% 0;
+            margin: 10px 50px 20px;
+            margin: 10px 50px 20px 0;
+            margin: 0;
+
+            margin-block: 10px 20px;
+            writing-mode: horizontal-tb;
+
+            margin-block: 20px 40px;
+            writing-mode: vertical-rl;
+
+            margin-block: 5% 20%;
+            writing-mode: horizontal-tb;
+
+            margin-block: 1rem auto;
+            writing-mode: vertical-lr;
+
+
+
+            margin-block-end: 20px; 
+            writing-mode: horizontal-tb;
+
+            margin-block-end: 20px; 
+            writing-mode: vertical-rl;
+
+            margin-block-end: 20%;
+            writing-mode: horizontal-tb;
+
+            margin-block-end: auto;
+            writing-mode: vertical-lr;
+
+            margin-block-start: 20px; 
+            writing-mode: horizontal-tb;
+
+            margin-block-start: 20px; 
+            writing-mode: vertical-rl;
+
+            margin-block-start: 20%;
+            writing-mode: horizontal-tb;
+
+            margin-block-start: auto;
+            writing-mode: vertical-lr;
+
+            margin-bottom: 1em;
+            margin-bottom: 10%;
+            margin-bottom: 10px;
+            margin-bottom: 0;
+
+            margin-inline: 5% 10%;
+            writing-mode: horizontal-tb;
+
+            margin-inline: 10px 40px;
+            writing-mode: vertical-rl;
+
+            margin-inline: 5% 10%;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            margin-inline-end: 20px; 
+            writing-mode: horizontal-tb;
+
+            margin-inline-end: 20px; 
+            writing-mode: vertical-rl;
+
+            margin-inline-end: 20%;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            margin-inline-start: 20px; 
+            writing-mode: horizontal-tb;
+
+            margin-inline-start: 20px; 
+            writing-mode: vertical-rl;
+
+            margin-inline-start: 20%;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            margin-top: 1em;
+            margin-top: 10%;
+            margin-top: 10px;
+            margin-top: 0;
+
+            /*https://developer.mozilla.org/en-US/docs/Web/CSS/list-style*/
+            list-style: square;
+            list-style: inside;
+            list-style: url('/media/examples/rocket.svg');
+            list-style: none;
+            list-style: georgian inside url('/media/examples/rocket.svg');
+            list-style: georgian outside url('/non-existent.svg');
+
+            list-style-position: inside;
+            list-style-position: outside;
+
+
+            list-style-type: space-counter;
+            list-style-type: disc;
+            list-style-type: circle;
+            list-style-type: "\1F44D";
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/line-break */
+            line-break: auto;
+            line-break: anywhere;
+            line-break: normal;
+            line-break: loose;
+
+            line-height: normal;
+            line-height: 2.5;
+            line-height: 3em;
+            line-height: 150%;
+            line-height: 32px;
+
+
+            /*https://developer.mozilla.org/en-US/docs/Web/CSS/align-content */
+            align-content: start;
+            align-content: center;
+            align-content: space-between;
+            align-content: space-around;
+            align-content: end;
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: normal;
+            align-content: baseline;
+            align-content: first baseline;
+            align-content: last baseline;
+            align-content: space-between;
+            align-content: space-around;
+            align-content: space-evenly;
+            align-content: stretch;
+            align-content: safe center;
+            align-content: unsafe center;
+            align-content: inherit;
+            align-content: initial;
+            align-content: revert;
+            align-content: revert-layer;
+            align-content: unset;
+
+            align-items: stretch;
+            align-items: center;
+            align-items: start;
+            align-items: end;
+            align-items: normal;
+
+            align-items: center; /* Pack items around the center */
+            align-items: start; /* Pack items from the start */
+            align-items: end; /* Pack items from the end */
+            align-items: flex-start; /* Pack flex items from the start */
+            align-items: flex-end; /* Pack flex items from the end */
+            align-items: self-start; /* Pack flex items from the start */
+            align-items: self-end; /* Pack flex items from the end */
+            align-items: baseline;
+            align-items: first baseline;
+            align-items: last baseline; /* Overflow alignment (for positional alignment only) */
+            align-items: safe center;
+            align-items: unsafe center;
+
+            /* Global values */
+            align-items: inherit;
+            align-items: initial;
+            align-items: revert;
+            align-items: revert-layer;
+            align-items: unset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-self */
+            align-self: stretch;
+            align-self: center;
+            align-self: start;
+            align-self: end;
+
+
+            /* Keyword values */
+            align-self: auto;
+            align-self: normal;
+
+            /* Positional alignment */
+            /* align-self does not take left and right values */
+            align-self: center; /* Put the item around the center */
+            align-self: start; /* Put the item at the start */
+            align-self: end; /* Put the item at the end */
+            align-self: self-start; /* Align the item flush at the start */
+            align-self: self-end; /* Align the item flush at the end */
+            align-self: flex-start; /* Put the flex item at the start */
+            align-self: flex-end; /* Put the flex item at the end */
+
+            /* Baseline alignment */
+            align-self: baseline;
+            align-self: first baseline;
+            align-self: last baseline;
+            align-self: stretch; /* Stretch 'auto'-sized items to fit the container */
+
+            /* Overflow alignment */
+            align-self: safe center;
+            align-self: unsafe center;
+
+            /* Global values */
+            align-self: inherit;
+            align-self: initial;
+            align-self: revert;
+            align-self: revert-layer;
+            align-self: unset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation */
+            animation: 3s ease-in 1s infinite reverse both running slidein;
+            animation: 3s linear 1s infinite running slidein;
+            animation: 3s linear 1s infinite alternate slidein;
+            animation: .5s linear 1s infinite alternate slidein;
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay */
+            animation-delay: 250ms;
+            animation-delay: 2s;
+            animation-delay: -2s;
+
+            /* Global values */
+            animation-delay: inherit;
+            animation-delay: initial;
+            animation-delay: revert;
+            animation-delay: revert-layer;
+            animation-delay: unset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction */
+            /* Single animation */
+            animation-direction: normal;
+            animation-direction: reverse;
+            animation-direction: alternate;
+            animation-direction: alternate-reverse;
+
+            /* Multiple animations */
+            animation-direction: normal, reverse;
+            animation-direction: alternate, reverse, normal;
+
+            /* Global values */
+            animation-direction: inherit;
+            animation-direction: initial;
+            animation-direction: revert;
+            animation-direction: revert-layer;
+            animation-direction: unset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration */
+            /* Single animation */
+            animation-duration: 6s;
+            animation-duration: 120ms;
+
+            /* Multiple animations */
+            animation-duration: 1.64s, 15.22s;
+            animation-duration: 10s, 35s, 230ms;
+
+            /* Global values */
+            animation-duration: inherit;
+            animation-duration: initial;
+            animation-duration: revert;
+            animation-duration: revert-layer;
+            animation-duration: unset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count */
+            animation-iteration-count: 0;
+            animation-iteration-count: 2;
+            animation-iteration-count: 1.5;
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name */
+            animation-name: none;
+            animation-name: slide;
+            animation-name: bounce;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/background */
+            background: green;
+            background: content-box radial-gradient(crimson, skyblue);
+
+            /*https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip */
+            background-clip: border-box;
+            background-clip: padding-box;
+
+            background-clip: content-box;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-color */
+			background-color: transparent;
+            background-color: brown;
+            background-color: #74992e;
+            background-color: rgb(255, 255, 128);
+            background-color: rgba(255, 255, 128, .5);
+            background-color: hsl(50, 33%, 25%);
+            background-color: hsla(50, 33%, 25%, .75);
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-position */
+            background-position: top;
+            background-position: left;
+            background-position: center;
+            background-position: 25% 75%;
+            background-position: bottom 50px right 100px;
+            background-position: right 35% bottom 45%;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-position-x */
+            background-position-x: left;
+            background-position-x: center;
+            background-position-x: 25%;
+            background-position-x: 2rem;
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-position-y */
+            background-position-y: top;
+            background-position-y: center;
+            background-position-y: 25%;
+            background-position-y: 2rem;
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border */
+            border: solid;
+            border: dashed red;
+            border: 1rem solid;
+            border: thick double #32a1ce;
+            border: 4mm ridge rgba(211, 220, 50, .6);
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block */
+            border-block: solid;
+            writing-mode: horizontal-tb;
+
+            border-block: dashed red;
+            writing-mode: vertical-rl;
+
+            border-block: 1rem solid;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-end */
+            border-block-end: solid; 
+            writing-mode: horizontal-tb;
+
+            border-block-end: dashed red; 
+            writing-mode: vertical-rl;
+
+            border-block-end: 1rem solid;
+            writing-mode: horizontal-tb;
+
+            border-block-end: thick double #32a1ce;
+            writing-mode: vertical-lr;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-end-color */
+            border-block-end-color: red; 
+            writing-mode: horizontal-tb;
+
+            border-block-end-color: #32a1ce; 
+            writing-mode: vertical-rl;
+
+            border-block-end-color: rgb(170, 50, 220, .6);
+            writing-mode: horizontal-tb;
+
+            border-block-end-color: hsl(60, 90%, 50%, .8);
+            writing-mode: vertical-lr;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-end-style */
+            border-block-end-style: dotted; 
+            writing-mode: horizontal-tb;
+
+            border-block-end-style: dotted; 
+            writing-mode: vertical-rl;
+
+            border-block-end-style: groove;
+            writing-mode: horizontal-tb;
+
+            border-block-end-style: dashed;
+            writing-mode: vertical-lr;
+
+
+            
+            /*  */
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-end-width */
+            border-block-end-width: thick; 
+            writing-mode: horizontal-tb;
+
+            border-block-end-width: thick; 
+            writing-mode: vertical-rl;
+
+            border-block-end-width: 4px;
+            writing-mode: horizontal-tb;
+
+            border-block-end-width: 4px;
+            writing-mode: vertical-lr;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-start */
+            border-block-start: solid; 
+            writing-mode: horizontal-tb;
+
+            border-block-start: dashed red; 
+            writing-mode: vertical-rl;
+
+            border-block-start: 1rem solid;
+            writing-mode: horizontal-tb;
+
+            border-block-start: thick double #32a1ce;
+            writing-mode: vertical-lr;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-start-color */
+            border-block-start-color: red; 
+            writing-mode: horizontal-tb;
+
+            border-block-start-color: #32a1ce; 
+            writing-mode: vertical-rl;
+
+            border-block-start-color: rgb(170, 50, 220, .6);
+            writing-mode: horizontal-tb;
+
+            border-block-start-color: hsl(60, 90%, 50%, .8);
+            writing-mode: vertical-lr;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-start-style */
+            border-block-start-style: dotted; 
+            writing-mode: horizontal-tb;
+
+            border-block-start-style: dotted; 
+            writing-mode: vertical-rl;
+
+            border-block-start-style: groove;
+            writing-mode: horizontal-tb;
+
+            border-block-start-style: dashed;
+            writing-mode: vertical-lr;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-start-width */
+            border-block-start-width: thick; 
+            writing-mode: horizontal-tb;
+
+            border-block-start-width: thick; 
+            writing-mode: vertical-rl;
+
+            border-block-start-width: 4px;
+            writing-mode: horizontal-tb;
+
+            border-block-start-width: 4px;
+            writing-mode: vertical-lr;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-block-style */
+            border-block-style: dotted;
+            writing-mode: horizontal-tb;
+
+            border-block-style: dotted;
+            writing-mode: vertical-rl;
+
+            border-block-style: groove;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom */
+            border-bottom: solid;
+            border-bottom: dashed red;
+            border-bottom: 1rem solid;
+            border-bottom: thick double #32a1ce;
+            border-bottom: 4mm ridge rgba(211, 220, 50, .6);
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-color */
+            border-bottom-color: red;
+            border-bottom-color: #32a1ce;
+            border-bottom-color: rgb(170, 50, 220, .6);
+            border-bottom-color: hsl(60, 90%, 50%, .8);
+            border-bottom-color: transparent;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-left-radius */
+            border-bottom-left-radius: 80px 80px;
+            border-bottom-left-radius: 250px 100px;
+            border-bottom-left-radius: 50%;
+
+            border-bottom-left-radius: 50%;
+            border: black 10px double;
+            background-clip: content-box;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-right-radius */
+            border-bottom-right-radius: 80px 80px;
+            border-bottom-right-radius: 250px 100px;
+            border-bottom-right-radius: 50%;
+
+            border-bottom-right-radius: 50%;
+            border: black 10px double;
+            background-clip: content-box;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-style */
+            border-bottom-style: none;
+            border-bottom-style: dotted;
+            border-bottom-style: dashed;
+            border-bottom-style: solid;
+            border-bottom-style: groove;
+            border-bottom-style: inset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-width */
+            border-bottom-width: thick;
+            border-bottom-width: 2em;
+            border-bottom-width: 4px;
+            border-bottom-width: 2ex;
+            border-bottom-width: 0;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse */
+            border-collapse: collapse;
+            border-collapse: separate;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-color */
+            border-color: red;
+            border-color: red #32a1ce;
+            border-color: red rgba(170, 50, 220, .6) green;
+            border-color: red yellow green hsla(60, 90%, 50%, .8);
+            border-color: red yellow green transparent;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-end-end-radius */
+            border-end-end-radius: 80px 80px;
+
+            border-end-end-radius: 250px 100px;
+            direction: rtl;
+
+            border-end-end-radius: 50%;
+            writing-mode: vertical-lr;
+
+            border-end-end-radius: 50%;
+            writing-mode: vertical-rl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-end-start-radius */
+            border-end-start-radius: 80px 80px;
+
+            border-end-start-radius: 250px 100px;
+            direction: rtl;
+
+            border-end-start-radius: 50%;
+            writing-mode: vertical-lr;
+
+            border-end-start-radius: 50%;
+            writing-mode: vertical-rl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-outset */
+            border-image-outset: 0;
+            border-image-outset: 15px;
+            border-image-outset: 30px;
+            border-image-outset: 40px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-repeat */
+            border-image-repeat: stretch;
+            border-image-repeat: repeat;
+            border-image-repeat: round;
+            border-image-repeat: space;
+            border-image-repeat: round stretch;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline */
+            border-inline: solid;
+            writing-mode: horizontal-tb;
+
+            border-inline: dashed red;
+            writing-mode: vertical-rl;
+
+            border-inline: 1rem solid;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-color */
+            border-inline-color: red;
+            writing-mode: horizontal-tb;
+
+            border-inline-color: #32a1ce;
+            writing-mode: vertical-rl;
+
+            border-inline-color: rgb(170, 50, 220, .6);
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-end */
+            border-inline-end: solid; 
+            writing-mode: horizontal-tb;
+
+            border-inline-end: dashed red; 
+            writing-mode: vertical-rl;
+
+            border-inline-end: 1rem solid;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-end-color */
+            border-inline-end-color: red; 
+            writing-mode: horizontal-tb;
+
+            border-inline-end-color: #32a1ce;
+            writing-mode: vertical-rl;
+
+            border-inline-end-color: rgb(170, 50, 220, .6);
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-end-style */
+            border-inline-end-style: dotted; 
+            writing-mode: horizontal-tb;
+
+            border-inline-end-style: dotted; 
+            writing-mode: vertical-rl;
+
+            border-inline-end-style: groove;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-end-width */
+            border-inline-end-width: thick; 
+            writing-mode: horizontal-tb;
+
+            border-inline-end-width: thick; 
+            writing-mode: vertical-rl;
+
+            border-inline-end-width: 4px;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-start */
+            border-inline-start: solid; 
+            writing-mode: horizontal-tb;
+
+            border-inline-start: dashed red; 
+            writing-mode: vertical-rl;
+
+            border-inline-start: 1rem solid;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-start-color */
+            border-inline-start-color: red; 
+            writing-mode: horizontal-tb;
+
+            border-inline-start-color: #32a1ce; 
+            writing-mode: vertical-rl;
+
+            border-inline-start-color: rgb(170, 50, 220, .6);
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-start-style */
+            border-inline-start-style: dotted; 
+            writing-mode: horizontal-tb;
+
+            border-inline-start-style: dotted; 
+            writing-mode: vertical-rl;
+
+            border-inline-start-style: groove;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-start-width */
+            border-inline-start-width: thick; 
+            writing-mode: horizontal-tb;
+
+            border-inline-start-width: thick; 
+            writing-mode: vertical-rl;
+
+            border-inline-start-width: 4px;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-style */
+            border-inline-style: dotted;
+            writing-mode: horizontal-tb;
+
+            border-inline-style: dotted;
+            writing-mode: vertical-rl;
+
+            border-inline-style: groove;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-inline-width */
+            border-inline-width: thick;
+            writing-mode: horizontal-tb;
+
+            border-inline-width: thick;
+            writing-mode: vertical-rl;
+
+            border-inline-width: 4px;
+            writing-mode: horizontal-tb;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-left */
+            border-left: solid;
+            border-left: dashed red;
+            border-left: 1rem solid;
+            border-left: thick double #32a1ce;
+            border-left: 4mm ridge rgba(211, 220, 50, .6);
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-left-color */
+            border-left-color: red;
+            border-left-color: #32a1ce;
+            border-left-color: rgb(170, 50, 220, .6);
+            border-left-color: hsl(60, 90%, 50%, .8);
+            border-left-color: transparent;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-left-style */
+            border-left-style: none;
+            border-left-style: dotted;
+            border-left-style: dashed;
+            border-left-style: solid;
+            border-left-style: groove;
+            border-left-style: inset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-left-width */
+            border-left-width: thick;
+            border-left-width: 2em;
+            border-left-width: 4px;
+            border-left-width: 2ex;
+            border-left-width: 0;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
+            border-radius: 30px;
+            border-radius: 25% 10%;
+            border-radius: 10% 30% 50% 70%;
+            border-radius: 10% / 50%;
+            border-radius: 10px 100px / 120px;
+            border-radius: 50% 20% / 10% 40%;
+
+            /* The syntax of the first radius allows one to four values */
+            /* Radius is set for all 4 sides */
+            border-radius: 10px;
+
+            /* top-left-and-bottom-right | top-right-and-bottom-left */
+            border-radius: 10px 5%;
+
+            /* top-left | top-right-and-bottom-left | bottom-right */
+            border-radius: 2px 4px 2px;
+
+            /* top-left | top-right | bottom-right | bottom-left */
+            border-radius: 1px 0 3px 4px;
+
+            /* The syntax of the second radius allows one to four values */
+            /* (first radius values) / radius */
+            border-radius: 10px / 20px;
+
+            /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+            border-radius: 10px 5% / 20px 30px;
+
+            /* (first radius values) / top-left | top-right-and-bottom-left | bottom-right */
+            border-radius: 10px 5px 2em / 20px 25px 30%;
+
+            /* (first radius values) / top-left | top-right | bottom-right | bottom-left */
+            border-radius: 10px 5% / 20px 25em 30px 35em;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-right */
+            border-right: solid;
+            border-right: dashed red;
+            border-right: 1rem solid;
+            border-right: thick double #32a1ce;
+            border-right: 4mm ridge rgba(211, 220, 50, .6);
+
+            border-right-style: dotted;
+            border-right: thick green;
+            border-right-style: dotted;
+            border-right: none thick green;
+
+            border-right: 1px;
+            border-right: 2px dotted;
+            border-right: medium dashed green;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-right-color */
+            border-right-color: red;
+            border-right-color: #32a1ce;
+            border-right-color: rgb(170, 50, 220, .6);
+            border-right-color: hsl(60, 90%, 50%, .8);
+            border-right-color: transparent;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-right-style */
+            border-right-style: none;
+            border-right-style: dotted;
+            border-right-style: dashed;
+            border-right-style: solid;
+            border-right-style: groove;
+            border-right-style: inset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-right-width */
+            border-right-width: thick;
+            border-right-width: 2em;
+            border-right-width: 4px;
+            border-right-width: 2ex;
+            border-right-width: 0;
+
+
+            /* Keyword values */
+            border-right-width: thin;
+            border-right-width: medium;
+            border-right-width: thick;
+
+
+            /* <length> values */
+            border-right-width: 10em;
+            border-right-width: 3vmax;
+            border-right-width: 6px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-spacing */
+            border-spacing: 0;
+            border-spacing: 5px;
+            border-spacing: 5px 1rem;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-start-end-radius */
+            border-start-end-radius: 80px 80px;
+            border-start-end-radius: 250px 100px;
+            direction: rtl;
+
+            border-start-end-radius: 50%;
+            writing-mode: vertical-lr;
+
+            border-start-end-radius: 50%;
+            writing-mode: vertical-rl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-start-start-radius */
+            border-start-start-radius: 80px 80px;
+
+            border-start-start-radius: 250px 100px;
+            direction: rtl;
+
+            border-start-start-radius: 50%;
+            writing-mode: vertical-lr;
+
+            border-start-start-radius: 50%;
+            writing-mode: vertical-rl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-style */
+            border-style: none;
+            border-style: dotted;
+            border-style: inset;
+            border-style: dashed solid;
+            border-style: dashed double none;
+            border-style: dashed groove none dotted;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-top */
+            border-top: solid;
+            border-top: dashed red;
+            border-top: 1rem solid;
+            border-top: thick double #32a1ce;
+            border-top: 4mm ridge rgba(211, 220, 50, .6);
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-color */
+            border-top-color: red;
+            border-top-color: #32a1ce;
+            border-top-color: rgb(170, 50, 220, .6);
+            border-top-color: hsl(60, 90%, 50%, .8);
+            border-top-color: transparent;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-left-radius */
+            border-top-left-radius: 80px 80px;
+            border-top-left-radius: 250px 100px;
+            border-top-left-radius: 50%;
+
+            border-top-left-radius: 50%;
+            border: black 10px double;
+            background-clip: content-box;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-style */
+            border-top-style: none;
+            border-top-style: dotted;
+            border-top-style: dashed;
+            border-top-style: solid;
+            border-top-style: groove;
+            border-top-style: inset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-width */
+            border-top-width: thick;
+            border-top-width: 2em;
+            border-top-width: 4px;
+            border-top-width: 2ex;
+            border-top-width: 0;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-width */
+            border-width: thick;
+            border-width: 1em;
+            border-width: 4px 1.25em;
+            border-width: 2ex 1.25ex 0.5ex;
+            border-width: 0 4px 8px 12px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/bottom */
+            bottom: 0;
+            bottom: 4em;
+            bottom: 10%;
+            bottom: 20px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/caption-side */
+            caption-side: top;
+            caption-side: bottom;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color */
+            caret-color: red;
+            caret-color: auto;
+            caret-color: transparent;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/clear */
+            clear: none;
+            clear: left;
+            clear: right;
+            clear: both;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
+            clip-path: circle(40%);
+            clip-path: ellipse(130px 140px at 10% 20%);
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/color */
+            color: rebeccapurple;
+            color: #00ff00;
+            color: rgb(214, 122, 127);
+            color: hsl(30, 100%, 50%);
+            color: hsla(30, 100%, 50%, .3);
+            color: hwb(1.5708rad 20% 10% / 0.7);
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme */
+            color-scheme: normal;
+            color-scheme: dark;
+            color-scheme: light;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/columns */
+            columns: 2;
+            columns: 6rem auto;
+            columns: 12em;
+            columns: 3;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/contain */
+            contain: none;
+            contain: size;
+            contain: layout;
+            contain: paint;
+            contain: strict;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/contain-intrinsic-block-size */
+            /* Keyword values */
+            contain-intrinsic-block-size: none;
+
+            /* <length> values */
+            contain-intrinsic-block-size: 1000px;
+            contain-intrinsic-block-size: 10rem;
+
+            /* auto <length> */
+            contain-intrinsic-block-size: auto 300px;
+
+            /* Global values */
+            contain-intrinsic-block-size: inherit;
+            contain-intrinsic-block-size: initial;
+            contain-intrinsic-block-size: revert;
+            contain-intrinsic-block-size: revert-layer;
+            contain-intrinsic-block-size: unset;
+
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/content */    
+            /* Keywords that cannot be combined with other values */
+            content: normal;
+            content: none;
+
+            /* <image> values */
+            content: url("http://www.example.com/test.png");
+            content: linear-gradient(#e66465, #9198e5);
+            content: image-set("image1x.png" 1x, "image2x.png" 2x);
+
+            /* alt text for generated content, added in the Level 3 specification */
+            content: url("http://www.example.com/test.png") / "This is the alt text";
+
+            /* <string> value */
+            content: "prefix";
+
+            /* list of content values */
+            content: "prefix" url("http://www.example.com/test.png");
+            content: "prefix" url("http://www.example.com/test.png") "suffix" /
+            "This is some alt text";
+
+            /* <counter> values, optionally with <list-style-type> */
+            content: counter(chapter_counter);
+            content: counter(chapter_counter, upper-roman);
+            content: counters(section_counter, ".");
+            content: counters(section_counter, ".", decimal-leading-zero);
+
+            /* attr() value linked to the HTML attribute value */
+            content: attr(value string);
+
+            /* Language- and position-dependent keywords */
+            content: open-quote;
+            content: close-quote;
+            content: no-open-quote;
+            content: no-close-quote;
+
+            /* Except for normal and none, several values can be used simultaneously */
+            content: open-quote counter(chapter_counter);
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment */ 
+            counter-increment: example-counter;
+            counter-increment: example-counter 0;
+            counter-increment: example-counter 5;
+            counter-increment: example-counter -5;
+            
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset */ 
+            counter-reset: none;
+            counter-reset: chapter-count 0;
+            counter-reset: chapter-count;
+            counter-reset: chapter-count 5;
+            counter-reset: chapter-count -5;
+            
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/counter-set */
+            counter-set: none;
+            counter-set: chapter-count 0;
+            counter-set: chapter-count;
+            counter-set: chapter-count 5;
+            counter-set: chapter-count -5;
+
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/cursor */ 
+            cursor: help;
+            cursor: wait;
+            cursor: crosshair;
+            cursor: not-allowed;
+            cursor: zoom-in;
+            cursor: grab;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/direction */ 
+            direction: ltr;
+            direction: rtl;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+            display: block;
+            display: inline-block;
+            display: none;
+            display: flex;
+            display: grid;
+
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells */ 
+            empty-cells: show;
+            empty-cells: hide;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/filter */ 
+            filter: url("../../media/examples/shadow.svg#element-id");
+            filter: blur(5px);
+            filter: contrast(200%);
+            filter: grayscale(80%);
+            filter: hue-rotate(90deg);
+            filter: drop-shadow(16px 16px 20px red) invert(75%);
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/float */ 
+            float: none;
+            float: left;
+            float: right;
+            float: inline-start;
+            float: inline-end;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/gap */ 
+            gap: 0;
+            gap: 10%;
+            gap: 1em;
+            gap: 10px 20px;
+            gap: calc(20px + 10%);
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation */ 
+            /* Keyword values */
+            hanging-punctuation: none;
+            hanging-punctuation: first;
+            hanging-punctuation: last;
+            hanging-punctuation: force-end;
+            hanging-punctuation: allow-end;
+
+
+            /* Two keywords */
+            hanging-punctuation: first force-end;
+            hanging-punctuation: first allow-end;
+            hanging-punctuation: first last;
+            hanging-punctuation: last force-end;
+            hanging-punctuation: last allow-end;
+
+
+            /* Three keywords */
+            hanging-punctuation: first force-end last;
+            hanging-punctuation: first allow-end last;
+
+
+            /* Global values */
+            hanging-punctuation: inherit;
+            hanging-punctuation: initial;
+            hanging-punctuation: revert;
+            hanging-punctuation: revert-layer;
+            hanging-punctuation: unset;
+            
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/height */ 
+            height: 150px;
+            height: 6em;
+            height: 75%;
+            height: auto;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/hyphenate-character */ 
+            hyphenate-character: auto;
+            hyphenate-character: '=';
+            hyphenate-character: '—';
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/hyphenate-limit-chars */
+            /* Numeric values */
+            hyphenate-limit-chars: 10 4 4;
+            hyphenate-limit-chars: 10 4;
+            hyphenate-limit-chars: 10;
+
+            /* Keyword values */
+            hyphenate-limit-chars: auto auto auto;
+            hyphenate-limit-chars: auto auto;
+            hyphenate-limit-chars: auto;
+
+            /* Mix of numeric and keyword values */
+            hyphenate-limit-chars: 10 auto 4;
+            hyphenate-limit-chars: 10 auto;
+            hyphenate-limit-chars: auto 3;
+
+            /* Global values */
+            hyphenate-limit-chars: inherit;
+            hyphenate-limit-chars: initial;
+            hyphenate-limit-chars: revert;
+            hyphenate-limit-chars: revert-layer;
+            hyphenate-limit-chars: unset;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens */
+            hyphens: none;
+            hyphens: manual;
+            hyphens: auto;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/inline-size */
+            inline-size: 150px;
+            writing-mode: horizontal-tb; 
+
+            inline-size: 150px;
+            writing-mode: vertical-rl;
+
+            inline-size: auto;
+            writing-mode: horizontal-tb;
+
+            inline-size: auto;
+            writing-mode: vertical-lr;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/left */
+            left: 0;
+            left: 4em;
+            left: 10%;
+            left: 20px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing */
+            letter-spacing: normal;
+            letter-spacing: .2rem;
+            letter-spacing: 1px;
+            letter-spacing: -1px;
+
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/opacity */
+            opacity: 0;
+            opacity: 0.33;
+            opacity: 1;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/order */
+            order: 3;
+            order: -1;
+            order: 2;
+            order: 4;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/perspective */
+            perspective: none;
+            perspective: 800px;
+            perspective: 23rem;
+            perspective: 5.5cm;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin */
+            perspective-origin: center;
+            perspective-origin: top;
+            perspective-origin: bottom right;
+            perspective-origin: -170%;
+            perspective-origin: 500% 200%;
+            
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events */
+            pointer-events: auto;
+            pointer-events: none;
+            pointer-events: stroke; /* SVG-only */
+            pointer-events: fill; /* SVG-only */
+
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/position */
+            position: static;
+
+            position: relative;
+            top: 40px; 
+            left: 40px;
+
+            position: absolute;
+            top: 40px; 
+            left: 40px;
+
+            position: sticky;
+            top: 20px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/quotes */
+            quotes: none;
+            quotes: initial;
+            quotes: "'" "'";
+            quotes: "„" "“" "‚" "‘";
+            quotes: "«" "»" "‹" "›";
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/resize */
+            resize: both;
+            resize: horizontal;
+            resize: vertical;
+            resize: none;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/right */
+            right: 0;
+            right: 4em;
+            right: 10%;
+            right: 20px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/rotate  */
+            rotate: none;
+            rotate: -45deg;
+            rotate: z 45deg;
+            rotate: x 45deg;
+            rotate: y 45deg;
+            rotate: 3 .5 2 45deg;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap */
+            row-gap: 0;
+            row-gap: 1ch;
+            row-gap: 1em;
+            row-gap: 20px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/ruby-position */
+            ruby-position: over;
+            ruby-position: under;
+            
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/scale */
+            scale: none;
+            scale: 1.5;
+            scale: 1.7 50%;
+            scale: 1 -1;
+            scale: 1.2 1.2 2;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/tab-size */
+            tab-size: 10px;
+            tab-size: 16px;
+            tab-size: 24px;
+            tab-size: 4;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout */
+            table-layout: auto;
+            width: 150px;
+
+            table-layout: fixed;
+            width: 150px;
+
+            table-layout: auto;
+            width: 100%;
+
+            table-layout: fixed;
+            width: 100%;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/top */
+            top: 0;
+            top: 4em;
+            top: 10%;
+            top: 20px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/translate */
+            translate: none;
+            translate: 40px;
+            translate: 50% -40%;
+            translate: 20px 4rem;
+            translate: 20px 4rem 150px;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/user-select */
+            user-select: auto;
+            user-select: none;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align */
+            vertical-align: baseline;
+            vertical-align: top;
+            vertical-align: middle;
+            vertical-align: bottom;
+            vertical-align: sub;
+            vertical-align: text-top;
+           
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/visibility */
+            visibility: visible;
+            visibility: hidden;
+            visibility: collapse;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/white-space */
+            white-space: normal;
+            white-space: nowrap;
+            white-space: pre;
+            white-space: pre-wrap;
+            white-space: pre-line;
+            white-space: break-spaces;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/width */
+            width: 150px;
+            width: 20em;
+            width: 75%;
+            width: auto;
+
+
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing */
+            word-spacing: normal;
+            word-spacing: 1rem;
+            word-spacing: 4px;
+            word-spacing: -.4ch;
+            
+            
+            /* https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode */
+            writing-mode: horizontal-tb;
+            writing-mode: vertical-lr;
+            writing-mode: vertical-rl;
+
+
+            /*  */
+            /*  */
+            /*  */
+            /*  */
+            /*  */
+            /*  */
+
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
