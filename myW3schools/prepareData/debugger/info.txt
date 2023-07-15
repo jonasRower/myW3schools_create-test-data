@@ -1,2 +1,0 @@
-these data are in project:
-https://github.com/jonasRower/myW3schools/tree/main/prepareData/debugger
