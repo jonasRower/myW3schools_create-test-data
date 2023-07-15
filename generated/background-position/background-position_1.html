@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    /* Shared among all <div>s */
+    div {
+        background-color: #ffee99;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 80px;
+        margin-bottom: 12px;
+    }
+
+    /* These examples use the `background` shorthand property */
+    .exampleone {
+        background: url("https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=15") #ffee99 2.5cm bottom no-repeat;
+    }
+    .exampletwo {
+        background: url("https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=15") #ffee99 left 4em bottom 1em no-repeat;
+    }
+
+    /* Multiple background images: Each image is matched with the
+    corresponding position, from first specified to last. */
+    .examplethree {
+        background-image: url("https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=15"), url("https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=15");
+        background-position: top;
+    }
+    
+</style>
+</head>
+<body>
+
+    <div class="exampleone">Example One</div>
+    <div class="exampletwo">Example Two</div>
+    <div class="examplethree">Example Three</div>
+
+</body>
+</html>
